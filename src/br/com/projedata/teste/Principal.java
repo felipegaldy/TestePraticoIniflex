@@ -166,21 +166,14 @@ public class Principal {
 		System.out.println("Total: R$ "+totalSalarios);
 		
 		System.out.println("\n3.12 – Imprimir quantos salários mínimos ganha cada funcionário, considerando que o salário mínimo é R$1212.00.");
-		BigDecimal salarioMin = new BigDecimal(1212.00);
-		BigDecimal quantidade = new BigDecimal(0);
-		
+		BigDecimal salarioMin = new BigDecimal(1212.00);		
 		for(int i=0; i < listaFuncionarios.size(); i++) {
-			
-			
-			//pega o salario e divide e mostra na tela
+						//pega o salario e divide e mostra na tela
 			System.out.println(listaFuncionarios.get(i).getNome() + " recebe " +
 					listaFuncionarios.get(i).getSalario().divide(salarioMin, new MathContext(2, RoundingMode.HALF_EVEN))
 					+ " salarios minimos.");
 		}
 		
-
-
 	}
-	
 
 }
